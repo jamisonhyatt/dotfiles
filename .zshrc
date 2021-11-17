@@ -13,5 +13,8 @@ SPACESHIP_BATTERY_SHOW=false
 plugins=(git sudo zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
+if [ test -f "/usr/local/bin/dev-vpn" ]; then 
+  source /usr/local/bin/dev-vpn
+fi
 
 export GOPRIVATE=github.com/github
