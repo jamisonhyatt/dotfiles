@@ -15,7 +15,3 @@ plugins=(git sudo zsh-syntax-highlighting zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 export GOPRIVATE=github.com/github
-
-if [ test -f "/usr/local/bin/dev-vpn" ]; then 
-  alias dev-vpn=/usr/local/bin/dev-vpn #this is a bash script, so we can't source it.
-fi
