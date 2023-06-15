@@ -8,7 +8,6 @@ apt-get -o DPkg::Options::="--force-confnew" -y install zsh fonts-powerline wget
 
 chsh -s /usr/bin/zsh $USERNAME
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
-cp -f ~.zshrc ~/.zshrc
 
 export ZSH="${HOME}/.oh-my-zsh"
 export ZSH_CUSTOM=${ZSH}/custom
@@ -31,3 +30,7 @@ if [ -z "$(cat /root/.ssh/authorized_keys 2>/dev/null)" ]; then
   echo "Downloading SSH keys..."
   curl --silent --fail "https://github.com/jamisonhyatt.keys" > /${HOME}/.ssh/authorized_keys
 fi
+
+### Replace .zshrc
+cp $HOME/.zshrc $HOME/.zshrc.bak
+cat .zshrc > $HOME/.zshrc
