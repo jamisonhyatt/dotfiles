@@ -10,8 +10,6 @@ SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_PACKAGE_SHOW=false
 SPACESHIP_BATTERY_SHOW=false
 
-plugins=(git sudo zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git sudo zsh-syntax-highlighting zsh-autosuggestions timer golang docker gh)
 
 source $ZSH/oh-my-zsh.sh
-
-export GOPRIVATE=github.com/github
